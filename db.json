@@ -1,0 +1,52 @@
+{
+  "vehicles": [
+    {
+      "model": "Nissan Altima",
+      "tagline": "Your grandma loves them!",
+      "modelYear": "2018",
+      "thumbnail": "TBD",
+      "colors": [
+        ["White Snow", "TBD", "white"],
+        ["Black Hole", "TBD2", "black"]
+      ]
+    },
+    {
+      "model": "Honda Pilot",
+      "tagline": "For the chubby man.",
+      "modelYear": "2017",
+      "thumbnail": "TBD",
+      "colors": [
+        ["Silverback", "TBD", "silver"],
+        ["Cherry Red", "TBD2", "red"]
+      ]
+    }
+  ],
+  "dealerships": [
+    {
+      "dealershipName": "Slick Willy's Cars",
+      "address": "101 Screwya Ln, Kansas City, MO 64110",
+      "phone": "1-800-scr-ewya"
+    },
+    {
+      "dealershipName": "Big Tex's Car Lot",
+      "address": "203 No Cattle St, Kansas City, MO 64114",
+      "phone": "1-800-ima-peon"
+    }
+  ],
+  "mailingList": [
+    {
+      "customerName": "James Dean",
+      "email": "lists@landersconsulting.biz",
+      "budget": 50000,
+      "phone": "3334445555",
+      "id": 1
+    },
+    {
+      "customerName": "Mary Smith",
+      "email": "troy@thelanders.us",
+      "budget": 40000,
+      "phone": "4445556666",
+      "id": 2
+    }
+  ]
+}

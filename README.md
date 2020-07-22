@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+This is an example app created during [Hands-On Application Development with React and Bootstrap O-Reilly Video](https://learning.oreilly.com/videos/hands-on-application-development/9781789531381).
+
 ## Available Scripts
 
 In the project directory, you can run:
