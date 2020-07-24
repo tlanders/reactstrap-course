@@ -4,6 +4,7 @@ import Axios from "axios";
 import TopNav from "./components/TopNav";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
+import {BrowserRouter as Router, Route} from "react-router-dom";
 
 class App extends React.Component {
   constructor(props) {
@@ -27,11 +28,15 @@ class App extends React.Component {
   render() {
       if(this.state.vehicleData) {
           return (
-              <div className="App">
-                  <TopNav/>
-                  <Home/>
-                  <Footer/>
-              </div>
+              <Router>
+                  <div className="App">
+                      <TopNav/>
+                      <div class={"contentArea"}>
+                        <Route exact path={'/'} component={Home}/>
+                      </div>
+                      <Footer/>
+                  </div>
+              </Router>
           );
       } else {
           return (<h4>Loading...</h4>);
