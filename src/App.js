@@ -31,7 +31,7 @@ class App extends React.Component {
               <Router>
                   <div className="App">
                       <TopNav/>
-                      <div class={"contentArea"}>
+                      <div className={"contentArea"}>
                         <Route exact path={'/'} component={Home}/>
                       </div>
                       <Footer/>
