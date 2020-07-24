@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import Axios from "axios";
+import TopNav from "./components/TopNav";
+import Home from "./components/Home";
 
 class App extends React.Component {
   constructor(props) {
@@ -22,10 +24,16 @@ class App extends React.Component {
   }
 
   render() {
-    return (
-        <div className="App">
-        </div>
-    );
+      if(this.state.vehicleData) {
+          return (
+              <div className="App">
+                  <TopNav/>
+                  <Home/>
+              </div>
+          );
+      } else {
+          return (<h4>Loading...</h4>);
+      }
   }
 }
 
