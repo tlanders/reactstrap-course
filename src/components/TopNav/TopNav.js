@@ -34,19 +34,16 @@ class TopNav extends React.Component {
     render() {
         return (
             <Navbar color="light" light expand="md">
-                <NavbarBrand href="/">reactstrap</NavbarBrand>
+                <NavbarBrand href="/">flying car dealership</NavbarBrand>
                 <NavbarToggler onClick={this.toggle} />
                 <Collapse isOpen={this.isOpen} navbar>
                     <Nav className="mr-auto" navbar>
                         <NavItem>
-                            <NavLink href="/components/">Components</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+                            <NavLink href="/">Home</NavLink>
                         </NavItem>
                         <UncontrolledDropdown nav inNavbar>
                             <DropdownToggle nav caret>
-                                Options
+                                Flying Cars
                             </DropdownToggle>
                             <DropdownMenu right>
                                 <DropdownItem>
@@ -61,8 +58,13 @@ class TopNav extends React.Component {
                                 </DropdownItem>
                             </DropdownMenu>
                         </UncontrolledDropdown>
+                        <NavItem>
+                            <NavLink href={"/find-a-dealer"}>Find a Dealer</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink href={"/build-and-price"}>Build and Price</NavLink>
+                        </NavItem>
                     </Nav>
-                    <NavbarText>Simple Text</NavbarText>
                 </Collapse>
             </Navbar>
         );
