@@ -3,6 +3,7 @@ import './App.css';
 import Axios from "axios";
 import TopNav from "./components/TopNav";
 import Home from "./components/Home";
+import Footer from "./components/Footer";
 
 class App extends React.Component {
   constructor(props) {
@@ -29,6 +30,7 @@ class App extends React.Component {
               <div className="App">
                   <TopNav/>
                   <Home/>
+                  <Footer/>
               </div>
           );
       } else {
