@@ -39,7 +39,7 @@ class App extends React.Component {
               </Router>
           );
       } else {
-          return (<h4>Loading...</h4>);
+          return (<div className={"App"}><h4><i className="fas fa-spinner fa-spin"></i> Loading...</h4></div>);
       }
   }
 }

@@ -39,11 +39,11 @@ class TopNav extends React.Component {
                 <Collapse isOpen={this.isOpen} navbar>
                     <Nav className="mr-auto" navbar>
                         <NavItem>
-                            <NavLink href="/">Home</NavLink>
+                            <NavLink href="/"><i className="fas fa-home"></i> Home</NavLink>
                         </NavItem>
                         <UncontrolledDropdown nav inNavbar>
                             <DropdownToggle nav caret>
-                                Flying Cars
+                                <i className="fas fa-space-shuttle"></i> Flying Cars
                             </DropdownToggle>
                             <DropdownMenu right>
                                 <DropdownItem>
@@ -59,10 +59,10 @@ class TopNav extends React.Component {
                             </DropdownMenu>
                         </UncontrolledDropdown>
                         <NavItem>
-                            <NavLink href={"/find-a-dealer"}>Find a Dealer</NavLink>
+                            <NavLink href={"/find-a-dealer"}><i className="fas fa-map-marker-alt"></i> Find a Dealer</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href={"/build-and-price"}>Build and Price</NavLink>
+                            <NavLink href={"/build-and-price"}><i className="fas fa-cog"></i> Build and Price</NavLink>
                         </NavItem>
                     </Nav>
                 </Collapse>
