@@ -15,6 +15,7 @@ module.exports = function() {
         vehicles: [
             {
                 "model": "Nissan Altima",
+                "detailKey": "altima2018",
                 "tagline": "Your grandma loves them!",
                 "modelYear": "2018",
                 "thumbnail": "TBD",
@@ -25,6 +26,7 @@ module.exports = function() {
             },
             {
                 "model": "Honda Pilot",
+                "detailKey": "pilot2017",
                 "tagline": "For the chubby man.",
                 "modelYear": "2017",
                 "thumbnail": "TBD",

@@ -14,6 +14,7 @@ import {
     DropdownItem,
     NavbarText
 } from 'reactstrap';
+import {Link} from "react-router-dom";
 
 class TopNav extends React.Component {
     constructor(props) {
@@ -32,11 +33,18 @@ class TopNav extends React.Component {
     }
 
     render() {
+        const vehicleSelections = this.props.vehicleData.map(veh => {
+            return (
+                <DropdownItem key={veh.detailKey}>
+                    <Link to={{pathname: "/detail/" + veh.detailKey}}>{veh.model}</Link>
+                </DropdownItem>
+            );
+        }, this);
         return (
             <Navbar color="light" light expand="md">
                 <NavbarBrand href="/">flying car dealership</NavbarBrand>
                 <NavbarToggler onClick={this.toggle} />
-                <Collapse isOpen={this.isOpen} navbar>
+                <Collapse isOpen={this.state.isOpen} navbar>
                     <Nav className="mr-auto" navbar>
                         <NavItem>
                             <NavLink href="/"><i className="fas fa-home"></i> Home</NavLink>
@@ -46,12 +54,7 @@ class TopNav extends React.Component {
                                 <i className="fas fa-space-shuttle"></i> Flying Cars
                             </DropdownToggle>
                             <DropdownMenu right>
-                                <DropdownItem>
-                                    Option 1
-                                </DropdownItem>
-                                <DropdownItem>
-                                    Option 2
-                                </DropdownItem>
+                                {vehicleSelections}
                                 <DropdownItem divider />
                                 <DropdownItem>
                                     Reset
