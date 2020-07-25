@@ -25,6 +25,18 @@ module.exports = function() {
                 ]
             },
             {
+                "model": "Nissan Sentra",
+                "detailKey": "sentra2019",
+                "tagline": "Best for your teens",
+                "modelYear": "2019",
+                "thumbnail": "TBD",
+                "colors": [
+                    ["Red Fury", "TBD", "red"],
+                    ["White Fluff", "TBD2", "white"],
+                    ["Baby Blue", "TBD3", "blue"]
+                ]
+            },
+            {
                 "model": "Honda Pilot",
                 "detailKey": "pilot2017",
                 "tagline": "For the chubby man.",
