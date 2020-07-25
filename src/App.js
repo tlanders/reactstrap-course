@@ -32,7 +32,9 @@ class App extends React.Component {
                   <div className="App">
                       <TopNav vehicleData={this.state.vehicleData}/>
                       <div className={"contentArea"}>
-                        <Route exact path={'/'} component={Home}/>
+                        <Route
+                            exact path={'/'}
+                            render={(props) => <Home {...props} vehicleData={this.state.vehicleData}/>} />
                       </div>
                       <Footer/>
                   </div>
