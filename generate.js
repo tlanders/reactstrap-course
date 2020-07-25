@@ -18,7 +18,8 @@ module.exports = function() {
                 "detailKey": "altima2018",
                 "tagline": "Your grandma loves them!",
                 "modelYear": "2018",
-                "thumbnail": "TBD",
+                "thumbnail": "/images/vehicles/altima-thumbnail.jpg",
+                "carouselImage": "/images/vehicles/altima.jpg",
                 "colors": [
                     ["White Snow", "TBD", "white"],
                     ["Black Hole", "TBD2", "black"]
@@ -29,7 +30,8 @@ module.exports = function() {
                 "detailKey": "sentra2019",
                 "tagline": "Best for your teens",
                 "modelYear": "2019",
-                "thumbnail": "TBD",
+                "thumbnail": "/images/vehicles/sentra-thumbnail.jpg",
+                "carouselImage": "/images/vehicles/sentra.jpg",
                 "colors": [
                     ["Red Fury", "TBD", "red"],
                     ["White Fluff", "TBD2", "white"],
@@ -41,7 +43,8 @@ module.exports = function() {
                 "detailKey": "pilot2017",
                 "tagline": "For the chubby man.",
                 "modelYear": "2017",
-                "thumbnail": "TBD",
+                "thumbnail": "/images/vehicles/pilot-thumbnail.jpg",
+                "carouselImage": "/images/vehicles/pilot.jpg",
                 "colors": [
                     ["Silverback", "TBD", "silver"],
                     ["Cherry Red", "TBD2", "red"]
