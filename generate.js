@@ -15,6 +15,7 @@ module.exports = function() {
         vehicles: [
             {
                 "model": "Nissan Altima",
+                "msrp": 29950,
                 "detailKey": "altima2018",
                 "tagline": "Your grandma loves them!",
                 "modelYear": "2018",
@@ -27,6 +28,7 @@ module.exports = function() {
             },
             {
                 "model": "Nissan Sentra",
+                "msrp": 17990,
                 "detailKey": "sentra2019",
                 "tagline": "Best for your teens",
                 "modelYear": "2019",
@@ -40,6 +42,7 @@ module.exports = function() {
             },
             {
                 "model": "Honda Pilot",
+                "msrp": 37490,
                 "detailKey": "pilot2017",
                 "tagline": "For the chubby man.",
                 "modelYear": "2017",
@@ -48,6 +51,20 @@ module.exports = function() {
                 "colors": [
                     ["Silverback", "TBD", "silver"],
                     ["Cherry Red", "TBD2", "red"]
+                ]
+            },
+            {
+                "model": "John Deere Compact",
+                "msrp": 37490,
+                "detailKey": "johnDeere2019",
+                "tagline": "For the rural stud.",
+                "modelYear": "2019",
+                "thumbnail": "/images/vehicles/johndeere-thumbnail.jpg",
+                "carouselImage": "/images/vehicles/johndeere.jpg",
+                "colors": [
+                    ["Country Green", "TBD", "green"],
+                    ["Ugly Yellow", "TBD3", "yellow"],
+                    ["Blood Red", "TBD2", "red"]
                 ]
             }
         ],
