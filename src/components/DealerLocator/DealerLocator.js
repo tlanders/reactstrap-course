@@ -36,9 +36,29 @@ class DealerLocator extends React.Component {
 
     render() {
         if(this.state.dealerships) {
-            return (
-                <h4>Dealer Locator goes here</h4>
-            );
+            let searchBar = (
+                <div>
+                    <h1>Over {this.state.dealerships.length} Authorized Dealers Nationwide</h1>
+                    <Row>
+                        <Col sm={12} md={{size: 6, offset: 3}}>
+                            <Form>
+                                <FormGroup>
+                                    <InputGroup>
+                                        <Input type={"text"}
+                                               val={this.state.searchTerm}
+                                               name={"user_address"}
+                                               placeholder={"We're probably nearby. What state are you in?"}/>
+                                           <InputGroupAddon addonType={"append"}>
+                                               <Button>X</Button>
+                                           </InputGroupAddon>
+                                    </InputGroup>
+                                </FormGroup>
+                            </Form>
+                        </Col>
+                    </Row>
+                </div>);
+
+            return searchBar;
         } else {
             return null;
         }
