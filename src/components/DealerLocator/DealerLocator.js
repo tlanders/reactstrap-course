@@ -22,6 +22,8 @@ class DealerLocator extends React.Component {
             searchTerm: "",
             dealerships: null
         };
+        this.handleInputChange = this.handleInputChange.bind(this);
+        this.onClearClicked = this.onClearClicked.bind(this);
     }
 
     componentDidMount() {
@@ -32,6 +34,19 @@ class DealerLocator extends React.Component {
                 });
             })
             .catch(err => console.log(err));
+    }
+
+    onClearClicked(event) {
+        event.preventDefault();
+        this.setState({
+            searchTerm: ""
+        });
+    }
+
+    handleInputChange(event) {
+        this.setState({
+            searchTerm: event.target.value
+        });
     }
 
     render() {
@@ -45,11 +60,12 @@ class DealerLocator extends React.Component {
                                 <FormGroup>
                                     <InputGroup>
                                         <Input type={"text"}
+                                               onChange={this.handleInputChange}
                                                val={this.state.searchTerm}
                                                name={"user_address"}
                                                placeholder={"We're probably nearby. What state are you in?"}/>
                                            <InputGroupAddon addonType={"append"}>
-                                               <Button>X</Button>
+                                               <Button onClick={this.onClearClicked}>X</Button>
                                            </InputGroupAddon>
                                     </InputGroup>
                                 </FormGroup>
