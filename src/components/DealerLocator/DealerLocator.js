@@ -51,6 +51,8 @@ class DealerLocator extends React.Component {
 
     render() {
         if(this.state.dealerships) {
+            const filteredDealerships = this.state.dealerships
+                .filter(dealer => dealer.state.includes(this.state.searchTerm));
             let searchBar = (
                 <div>
                     <h1>Over {this.state.dealerships.length} Authorized Dealers Nationwide</h1>
@@ -74,7 +76,41 @@ class DealerLocator extends React.Component {
                     </Row>
                 </div>);
 
-            return searchBar;
+            return (
+                <div>
+                    {searchBar}
+                    <Row>
+                        <Col sm={12} md={{size:10, offset:1}}>
+                            <Table hover>
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Dealership</th>
+                                        <th>Address</th>
+                                        <th>City</th>
+                                        <th>State</th>
+                                        <th>Zip</th>
+                                        <th>Phone</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {filteredDealerships.map((d, index) => {
+                                        return (
+                                            <tr key={d.phone}>
+                                                <td>{String(index)}</td>
+                                                <td>{d.dealershipName}</td>
+                                                <td>{d.address}</td>
+                                                <td>{d.city}</td>
+                                                <td>{d.state}</td>
+                                                <td>{d.zip}</td>
+                                                <td>{d.phone}</td>
+                                            </tr>);
+                                    })}
+                                </tbody>
+                            </Table>
+                        </Col>
+                    </Row>
+                </div>);
         } else {
             return null;
         }
