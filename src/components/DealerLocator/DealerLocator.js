@@ -29,8 +29,15 @@ class DealerLocator extends React.Component {
     componentDidMount() {
         Axios.get('http://localhost:3001/dealerships')
             .then(res => {
+                let stateCounter = res.data.reduce((accum, dealer) => {
+                    accum[dealer.state] = (accum[dealer.state] || 0) + 1;
+                    // console.log(`${dealer.state}: ${accum[dealer.state]}`);
+                    return accum;
+                }, {});
+                console.log(stateCounter);
                 this.setState({
-                    dealerships: res.data
+                    dealerships: res.data,
+                    stateCounter: stateCounter
                 });
             })
             .catch(err => console.log(err));
@@ -76,13 +83,46 @@ class DealerLocator extends React.Component {
                     </Row>
                 </div>);
 
-            return (
-                <div>
-                    {searchBar}
-                    <Row>
-                        <Col sm={12} md={{size:10, offset:1}}>
-                            <Table hover>
-                                <thead>
+            if(this.state.searchTerm.length < 4) {
+                let stateCounterHtml = null
+                if(this.state.stateCounter) {
+                    stateCounterHtml = Object.entries(this.state.stateCounter)
+                        .sort(([astate],[bstate]) => astate.localeCompare(bstate))
+                        .map(([stateName, count]) => {
+                        // console.log(`${stateName} - ${count}`);
+                        return (
+                            <ListGroupItem
+                                key={stateName}
+                                tag={"a"}
+                                href={"#"}
+                                className={"justify-content-between"}
+                            >
+                                {stateName} <Badge pill>{count}</Badge>
+                            </ListGroupItem>
+                        );
+                    })
+                }
+
+                return (
+                    <div>
+                        {searchBar}
+                        <Row>
+                            <Col sm={12} md={{size: 10, offset: 1}}>
+                                <ListGroup>
+                                    {stateCounterHtml}
+                                </ListGroup>
+                            </Col>
+                        </Row>
+                    </div>
+                );
+            } else {
+                return (
+                    <div>
+                        {searchBar}
+                        <Row>
+                            <Col sm={12} md={{size: 10, offset: 1}}>
+                                <Table hover>
+                                    <thead>
                                     <tr>
                                         <th>#</th>
                                         <th>Dealership</th>
@@ -92,8 +132,8 @@ class DealerLocator extends React.Component {
                                         <th>Zip</th>
                                         <th>Phone</th>
                                     </tr>
-                                </thead>
-                                <tbody>
+                                    </thead>
+                                    <tbody>
                                     {filteredDealerships.map((d, index) => {
                                         return (
                                             <tr key={d.phone}>
@@ -104,13 +144,16 @@ class DealerLocator extends React.Component {
                                                 <td>{d.state}</td>
                                                 <td>{d.zip}</td>
                                                 <td>{d.phone}</td>
-                                            </tr>);
+                                            </tr>
+                                        );
                                     })}
-                                </tbody>
-                            </Table>
-                        </Col>
-                    </Row>
-                </div>);
+                                    </tbody>
+                                </Table>
+                            </Col>
+                        </Row>
+                    </div>
+                );
+            }
         } else {
             return null;
         }
