@@ -24,6 +24,7 @@ class DealerLocator extends React.Component {
         };
         this.handleInputChange = this.handleInputChange.bind(this);
         this.onClearClicked = this.onClearClicked.bind(this);
+        this.onListClick = this.onListClick.bind(this);
     }
 
     componentDidMount() {
@@ -34,13 +35,21 @@ class DealerLocator extends React.Component {
                     // console.log(`${dealer.state}: ${accum[dealer.state]}`);
                     return accum;
                 }, {});
-                console.log(stateCounter);
+                // console.log(stateCounter);
                 this.setState({
                     dealerships: res.data,
                     stateCounter: stateCounter
                 });
             })
             .catch(err => console.log(err));
+    }
+
+    onListClick(event) {
+        // console.log(`list click: ${event}`);
+        event.preventDefault();
+        this.setState({
+            searchTerm: event.target.text.split(" ")[0]
+        });
     }
 
     onClearClicked(event) {
@@ -95,6 +104,7 @@ class DealerLocator extends React.Component {
                                 key={stateName}
                                 tag={"a"}
                                 href={"#"}
+                                onClick={this.onListClick}
                                 className={"justify-content-between"}
                             >
                                 {stateName} <Badge pill>{count}</Badge>
