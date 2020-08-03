@@ -53,13 +53,14 @@ class DealerLocator extends React.Component {
     }
 
     onClearClicked(event) {
-        event.preventDefault();
+        // event.preventDefault();
         this.setState({
             searchTerm: ""
         });
     }
 
     handleInputChange(event) {
+        // event.preventDefault();
         this.setState({
             searchTerm: event.target.value
         });
@@ -80,7 +81,7 @@ class DealerLocator extends React.Component {
                                         <Input type={"text"}
                                                onChange={this.handleInputChange}
                                                val={this.state.searchTerm}
-                                               name={"user_address"}
+                                               name={"searchTerm"}
                                                placeholder={"We're probably nearby. What state are you in?"}/>
                                            <InputGroupAddon addonType={"append"}>
                                                <Button onClick={this.onClearClicked}>X</Button>

@@ -9,7 +9,7 @@ class Footer extends React.Component {
     render() {
         return (
             <footer>
-                <a href="/schedule">Schedule a Test Flight!</a>
+                <a href="/schedule-test-flight">Schedule a Test Flight!</a>
             </footer>
         );
     }
