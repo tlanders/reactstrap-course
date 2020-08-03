@@ -80,7 +80,7 @@ class DealerLocator extends React.Component {
                                     <InputGroup>
                                         <Input type={"text"}
                                                onChange={this.handleInputChange}
-                                               val={this.state.searchTerm}
+                                               value={this.state.searchTerm}
                                                name={"searchTerm"}
                                                placeholder={"We're probably nearby. What state are you in?"}/>
                                            <InputGroupAddon addonType={"append"}>
