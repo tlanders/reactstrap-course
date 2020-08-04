@@ -51,7 +51,14 @@ class BuildAndPrice extends React.Component {
         };
     }
 
-    toggle(tab) {}
+    toggle(tab) {
+        if(this.state.activeTab !== tab) {
+            this.setState({
+                activeTab: tab
+            });
+        }
+    }
+
     toggleModal() {}
 
     computePrice() {
@@ -81,10 +88,56 @@ class BuildAndPrice extends React.Component {
                 <h4>Color: {this.state.selectedColorName}</h4>
                 <h5>Engine: {this.state.selectedEngineName}</h5>
                 <h5>Price as Configured: {Numeral(this.computePrice()).format('$0,0.00')}</h5>
-                {/*<ColorPicker/>*/}
-                {/*<EngineSelector/>*/}
-                {/*<ModelPicker/>*/}
-                {/*<ModelPickerCollapse/>*/}
+
+                <Nav tabs>
+                    <NavItem>
+                        <NavLink
+                            className={classnames({ active: this.state.activeTab === '1' })}
+                            onClick={() => { this.toggle('1'); }}
+                        >
+                            Model
+                        </NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink
+                            className={classnames({ active: this.state.activeTab === '2' })}
+                            onClick={() => { this.toggle('2'); }}
+                        >
+                            Color
+                        </NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink
+                            className={classnames({ active: this.state.activeTab === '3' })}
+                            onClick={() => { this.toggle('3'); }}
+                        >
+                            Engine
+                        </NavLink>
+                    </NavItem>
+                </Nav>
+                <TabContent activeTab={this.state.activeTab}>
+                    <TabPane tabId="1">
+                        <Row>
+                            <Col sm="12">
+                                <h4>Model Picker goes here</h4>
+                            </Col>
+                        </Row>
+                    </TabPane>
+                    <TabPane tabId="2">
+                        <Row>
+                            <Col sm="12">
+                                <h4>Color Picker goes here</h4>
+                            </Col>
+                        </Row>
+                    </TabPane>
+                    <TabPane tabId={"3"}>
+                        <Row>
+                            <Col sm="12">
+                                <h4>Engine Picker goes here</h4>
+                            </Col>
+                        </Row>
+                    </TabPane>
+                </TabContent>
             </div>
         );
     }
