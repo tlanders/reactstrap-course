@@ -18,7 +18,7 @@ class VehicleDetail extends React.Component {
             <div>
                 <Row>
                     <Col>
-                        <img className="detailImage" src={selectedVehicleData.thumbnail}/>
+                        <img className="detailImage" src={selectedVehicleData.carouselImage}/>
                     </Col>
                 </Row>
                 <Row>
