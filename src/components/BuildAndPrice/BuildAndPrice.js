@@ -36,7 +36,7 @@ class BuildAndPrice extends React.Component {
         this.computePrice = this.computePrice.bind(this);
         this.state = {
             activeTab: '1',     // currently selected tab, 1-based
-            selectedVehicle: 'jumper',      // key for selected vehicle
+            selectedVehicle: 'altima2018',      // key for selected vehicle
             userHasSelectedVehicle: false,
             userHasSelectedColor: false,
             selectedColor: 0,   // index to color
@@ -120,6 +120,7 @@ class BuildAndPrice extends React.Component {
                         <Row>
                             <Col sm="12">
                                 <h4>Model Picker goes here</h4>
+                                <ModelPickerCollapse {...this.props} selectedVehicle={this.state.selectedVehicle}/>
                             </Col>
                         </Row>
                     </TabPane>
