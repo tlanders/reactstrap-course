@@ -2,7 +2,7 @@ import React from "react";
 
 const BuildAndPriceImageRotator = (props) => {
     return (
-        <p>Image Rotator</p>
+        <p>Image Rotator - {props.selectedVehicle}</p>
     );
 }
 

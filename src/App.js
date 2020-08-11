@@ -41,7 +41,9 @@ class App extends React.Component {
                                 render={(props) => <Home {...props} vehicleData={this.state.vehicleData}/>}/>
                             <Route path={'/find-a-dealer'} component={DealerLocator}/>
                             <Route path={'/schedule-test-flight'} component={TestFlightForm}/>
-                            <Route path={'/build-and-price'} component={BuildAndPrice}/>
+                            <Route path={'/build-and-price'}
+                                   render={(props) => <BuildAndPrice {...props} vehicleData={this.state.vehicleData}/>}
+                            />
                             <Route path={'/detail/:selectedVehicle'}
                                    render={(props) => <VehicleDetail {...props} vehicleData={this.state.vehicleData}/>}
                             />

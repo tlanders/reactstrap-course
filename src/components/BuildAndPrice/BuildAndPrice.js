@@ -66,7 +66,17 @@ class BuildAndPrice extends React.Component {
     }
 
     determineProgress() {}
-    selectVehicle(event) {}
+
+    selectVehicle(event) {
+        const selected = event.target.dataset.model;
+        const msrp = event.target.dataset.msrp;
+        this.setState({
+            msrp,
+            selectedVehicle: selected,
+            activeTab: '2'
+        });
+    }
+
     selectEngine(event) {}
     selectColor(event) {}
 
@@ -119,8 +129,11 @@ class BuildAndPrice extends React.Component {
                     <TabPane tabId="1">
                         <Row>
                             <Col sm="12">
-                                <h4>Model Picker goes here</h4>
-                                <ModelPickerCollapse {...this.props} selectedVehicle={this.state.selectedVehicle}/>
+                                <ModelPicker
+                                    vehicleData={this.props.vehicleData}
+                                    selectedVehicle={this.state.selectedVehicle}
+                                    selectVehicle={this.selectVehicle}
+                                />
                             </Col>
                         </Row>
                     </TabPane>
