@@ -22,8 +22,8 @@ module.exports = function() {
                 "thumbnail": "/images/vehicles/altima-thumbnail.jpg",
                 "carouselImage": "/images/vehicles/altima.jpg",
                 "colors": [
-                    ["White Snow", "TBD", "white"],
-                    ["Black Hole", "TBD2", "black"]
+                    ["White Snow", "/images/white-thumbnail-50.png", "white"],
+                    ["Black Hole", "/images/black-thumbnail-50.png", "black"]
                 ],
                 "options": {
                     "engines":[
@@ -48,9 +48,9 @@ module.exports = function() {
                 "thumbnail": "/images/vehicles/sentra-thumbnail.jpg",
                 "carouselImage": "/images/vehicles/sentra.jpg",
                 "colors": [
-                    ["Red Fury", "TBD", "red"],
-                    ["White Fluff", "TBD2", "white"],
-                    ["Baby Blue", "TBD3", "blue"]
+                    ["Red Fury", "/images/red-thumbnail-50.png", "red"],
+                    ["White Fluff", "/images/white-thumbnail-50.png", "white"],
+                    ["Baby Blue", "/images/blue-thumbnail-50.png", "blue"]
                 ],
                 "options": {
                     "engines":[
@@ -75,8 +75,8 @@ module.exports = function() {
                 "thumbnail": "/images/vehicles/pilot-thumbnail.jpg",
                 "carouselImage": "/images/vehicles/pilot.jpg",
                 "colors": [
-                    ["Silverback", "TBD", "silver"],
-                    ["Cherry Red", "TBD2", "red"]
+                    ["Silverback", "/images/silver-thumbnail-50.png", "silver"],
+                    ["Cherry Red", "/images/red-thumbnail-50.png", "red"]
                 ],
                 "options": {
                     "engines":[
@@ -101,9 +101,9 @@ module.exports = function() {
                 "thumbnail": "/images/vehicles/johndeere-thumbnail.jpg",
                 "carouselImage": "/images/vehicles/johndeere.jpg",
                 "colors": [
-                    ["Country Green", "TBD", "green"],
-                    ["Ugly Yellow", "TBD3", "yellow"],
-                    ["Blood Red", "TBD2", "red"]
+                    ["Country Green", "/images/green-thumbnail-50.png", "green"],
+                    ["Ugly Yellow", "/images/yellow-thumbnail-50.png", "yellow"],
+                    ["Blood Red", "/images/red-thumbnail-50.png", "red"]
                 ],
                 "options": {
                     "engines":[
