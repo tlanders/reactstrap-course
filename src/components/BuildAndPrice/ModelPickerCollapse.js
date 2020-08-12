@@ -32,7 +32,7 @@ class ModelPickerCollapse extends React.Component {
 
     render() {
         const vehicle = this.props.selectedVehicle;
-        console.log(vehicle);
+        // console.log(vehicle);
         return (
             <div className={"clickableMedia"}>
                 <Media>

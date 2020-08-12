@@ -23,3 +23,13 @@
     padding: 8px;
     border: silver 1px solid;
 }
+
+.colorBox {
+    margin: 20px;
+    padding: 8px;
+    border: silver 1px solid;
+}
+
+.colorBox .selected {
+    border: palevioletred 2px solid;
+}

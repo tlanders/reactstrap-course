@@ -78,7 +78,16 @@ class BuildAndPrice extends React.Component {
     }
 
     selectEngine(event) {}
-    selectColor(event) {}
+
+    selectColor(event) {
+        const selected = event.target.dataset.color;
+        const selectedColorName = event.target.dataset.colorName;
+        this.setState({
+            activeTab: '3',
+            selectedColor: Number(selected),
+            selectedColorName
+        });
+    }
 
     render() {
         return (
@@ -140,7 +149,12 @@ class BuildAndPrice extends React.Component {
                     <TabPane tabId="2">
                         <Row>
                             <Col sm="12">
-                                <h4>Color Picker goes here</h4>
+                                <ColorPicker
+                                    vehicleData={this.props.vehicleData}
+                                    selectedVehicle={this.state.selectedVehicle}
+                                    selectColor={this.selectColor}
+                                    selectedColor={this.state.selectedColor}
+                                />
                             </Col>
                         </Row>
                     </TabPane>
