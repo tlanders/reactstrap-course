@@ -77,7 +77,16 @@ class BuildAndPrice extends React.Component {
         });
     }
 
-    selectEngine(event) {}
+    selectEngine(event) {
+        const selected = event.target.dataset.engine;
+        const cost = event.target.dataset.engineCost;
+        const name = event.target.dataset.engineName;
+        this.setState({
+            selectedEngine: Number(selected),
+            selectedEngineName: name,
+            engineCost: cost
+        });
+    }
 
     selectColor(event) {
         const selected = event.target.dataset.color;
@@ -161,7 +170,12 @@ class BuildAndPrice extends React.Component {
                     <TabPane tabId={"3"}>
                         <Row>
                             <Col sm="12">
-                                <h4>Engine Picker goes here</h4>
+                                <EngineSelector
+                                    vehicleData={this.props.vehicleData}
+                                    selectedVehicle={this.state.selectedVehicle}
+                                    onEngineSelect={this.selectEngine}
+                                    selectedEngine={this.state.selectedEngine}
+                                />
                             </Col>
                         </Row>
                     </TabPane>

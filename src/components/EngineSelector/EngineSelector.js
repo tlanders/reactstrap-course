@@ -1,5 +1,5 @@
 import React from 'react';
-import "./BuildAndPrice.css";
+import "./EngineSelector.css";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
 class EngineSelector extends React.Component {
@@ -29,11 +29,11 @@ class EngineSelector extends React.Component {
                         {selectedVehicleData.options.engines.map((engine, index) => {
                             return (
                                 <DropdownItem
-                                    data-engine={index}
-                                    data-engine-cost={engine.cost}
-                                    data-engine-name={engine.name}
-                                    onClick={this.props.onEngineSelect}
-                                    key={engine.name}>
+                                        data-engine={index}
+                                        data-engine-cost={engine.cost}
+                                        data-engine-name={engine.name}
+                                        onClick={this.props.onEngineSelect}
+                                        key={engine.name}>
                                     {engine.name}
                                 </DropdownItem>
                             )

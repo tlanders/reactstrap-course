@@ -29,10 +29,12 @@ module.exports = function() {
                     "engines":[
                         {
                             "nmpg":27.2,
+                            "cost": 2300,
                             "name":"Little One"
                         },
                         {
                             "nmpg":12.3,
+                            "cost": 4500,
                             "name":"Big One"
                         }
                     ]
@@ -56,10 +58,12 @@ module.exports = function() {
                     "engines":[
                         {
                             "nmpg":25.6,
+                            "cost": 1100,
                             "name":"Inline 4"
                         },
                         {
                             "nmpg":16.9,
+                            "cost": 2750,
                             "name":"Big v6"
                         }
                     ]
@@ -82,10 +86,12 @@ module.exports = function() {
                     "engines":[
                         {
                             "nmpg":19.3,
+                            "cost": 995,
                             "name":"Wimpy 200"
                         },
                         {
                             "nmpg":14.6,
+                            "cost": 2150,
                             "name":"Powerful 350"
                         }
                     ]
@@ -109,10 +115,12 @@ module.exports = function() {
                     "engines":[
                         {
                             "nmpg":13.3,
+                            "cost": 4450,
                             "name":"Baby Block"
                         },
                         {
                             "nmpg":9.6,
+                            "cost": 5995,
                             "name":"Big Block"
                         }
                     ]
