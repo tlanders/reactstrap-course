@@ -22,6 +22,7 @@ import {
     Progress
 } from 'reactstrap';
 import Numeral from 'numeral';
+import TestFlightForm from "../TestFlightForm";
 
 class BuildAndPrice extends React.Component {
     constructor(props) {
@@ -59,7 +60,11 @@ class BuildAndPrice extends React.Component {
         }
     }
 
-    toggleModal() {}
+    toggleModal() {
+        this.setState({
+            modal: !this.state.modal
+        });
+    }
 
     computePrice() {
         return Number(this.state.msrp) + Number(this.state.engineCost);
@@ -84,7 +89,8 @@ class BuildAndPrice extends React.Component {
         this.setState({
             selectedEngine: Number(selected),
             selectedEngineName: name,
-            engineCost: cost
+            engineCost: cost,
+            modal: true
         });
     }
 
@@ -180,6 +186,15 @@ class BuildAndPrice extends React.Component {
                         </Row>
                     </TabPane>
                 </TabContent>
+                <Modal isOpen={this.state.modal} toggle={this.toggleModal}>
+                    <ModalHeader toggle={this.toggleModal}>Schedule Test Flight</ModalHeader>
+                    <ModalBody>
+                        <TestFlightForm/>
+                    </ModalBody>
+                    <ModalFooter>
+                        <Button color="primary" onClick={this.toggleModal}>Done</Button>{' '}
+                    </ModalFooter>
+                </Modal>
             </div>
         );
     }
