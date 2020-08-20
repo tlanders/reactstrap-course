@@ -4,7 +4,7 @@ import BuildAndPriceImageRotator from "./BuildAndPriceImageRotator";
 import ColorPicker from "./ColorPicker";
 import EngineSelector from "./EngineSelector";
 import ModelPicker from "./ModelPicker";
-import ModelPickerCollapse from "./ModelPickerCollapse";
+// import ModelPickerCollapse from "./ModelPickerCollapse";
 import classnames from 'classnames';
 import {
     TabContent,
@@ -18,8 +18,7 @@ import {
     ModalHeader,
     ModalBody,
     ModalFooter,
-    Button,
-    Progress
+    Button
 } from 'reactstrap';
 import Numeral from 'numeral';
 import TestFlightForm from "../TestFlightForm";

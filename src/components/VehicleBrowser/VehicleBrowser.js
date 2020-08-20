@@ -15,10 +15,6 @@ import {
 import Numeral from 'numeral';
 
 class VehicleBrowser extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         const vehicleSelections = this.props.vehicleData.map(veh => {
             return (
@@ -31,7 +27,7 @@ class VehicleBrowser extends React.Component {
                             <CardText>Starts at {Numeral(veh.msrp).format('$0,0')}</CardText>
                             <NavLink href={"/detail/" + veh.detailKey}>Details</NavLink>
                             <NavLink href={"/build-and-price"}>Build and Price</NavLink>
-                            <NavLink href={"/find-a-delear"}>Dealers Near You</NavLink>
+                            <NavLink href={"/find-a-dealer"}>Dealers Near You</NavLink>
                         </CardBody>
                     </Card>
                 </Col>

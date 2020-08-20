@@ -4,7 +4,7 @@ import {
     Card,
     InputGroup,
     InputGroupAddon,
-    InputGroupText, CardBody, CardTitle, CardSubtitle, CardText, FormGroup, Input, Button, Form, Col, Row
+    CardBody, CardTitle, CardSubtitle, CardText, FormGroup, Input, Button, Form, Col
 } from 'reactstrap';
 import Axios from "axios";
 

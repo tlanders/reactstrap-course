@@ -4,11 +4,8 @@ import "./BuildAndPrice.css";
 import {
     Collapse,
     Media,
-    Button,
     Card,
     CardBody,
-    Row,
-    Col,
     Nav,
     NavItem,
     NavLink
